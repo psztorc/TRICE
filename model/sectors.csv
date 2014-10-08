@@ -1,0 +1,35 @@
+No.,String,String
+1,ric,Raw and processed rice
+2,wht,Wheat
+3,gro,Cereal grains nec
+4,v_f,"Vegetables, fruit, nuts"
+5,osd,Oil seeds
+6,sug,Raw and processed sugar
+7,pfb,Plant-based fibers
+8,ocr,Crops nec
+9,ctl,"Cattle,sheep,goats,horses"
+10,oap,Animal products nec
+11,dry,Raw and processed dairy
+12,wol,"Wool, silk-worm cocoons"
+13,frs,Forestry
+14,cmt,"Meat: cattle,sheep,goats,horse"
+15,omt,Meat products nec
+16,vol,Vegetable oils and fats
+17,ofd,Food products nec
+18,b_t,Beverages and tobacco products
+19,tex,Textiles
+20,wap,Wearing apparel
+21,lea,Leather products
+22,lum,Wood products
+23,ppp,"Paper products, publishing"
+24,crp,"Chemical,rubber,plastic prods"
+25,nmm,Mineral products nec
+26,i_s,Ferrous metals
+27,nfm,Metals nec
+28,fmp,Metal products
+29,mvh,Motor vehicles and parts
+30,otn,Transport equipment nec
+31,ele,Electronic equipment
+32,ome,Machinery and equipment nec
+33,omf,Manufactures nec
+34,xxx,All other sectors

@@ -1,16 +1,16 @@
 <h2>Ossa - TRICE Calculations</h2>
 Paul Sztorc  
-[Click here for a .pdf version of these instructions.](https://github.com/psztorc/TRICE/raw/master/Implementing-Ossa-TRICE-model-Instructions-v1.pdf)
+[Click here for a .pdf version of these instructions.](https://github.com/psztorc/TRICE/raw/master/Implementing-Ossa-TRICE-model-Instructions-v2.pdf)
 
 <h4>Instructions:</h4>  
 
 Using: [MATLAB](http://www.mathworks.com/products/matlab/whatsnew.html) R2014a (8.3.0.532) 64-bit]  
 …in a working directory containing Ossa’s files.  
-…run “Set 1” (Main_RunMe.m) .  
+…run “Set 1” (model/Main_RunMe.m) .  
 
 Then, in the same directory,  
 Using: [RStudio](http://www.rstudio.com/) 0.98.1049 using [R 3.0.1 (64-bit)](http://cran.r-project.org/)  
-…run “Set 2” (r_main.Rmd).  
+…run “Set 2” (model/results/r_main.Rmd) .  
 
 
 Set 1 includes calculations run by Ossa himself (“mycalculations”), which provide the model-setup. From here, I set the tariff shocks with “Shocks = (0:10)/100”, which produces shocks of 0, .01, .02, … , .10 . Next, I create blank MATLAB arrays in which to store the results of the program. Finally, I compute the number of possible clubs, and loop through each club. For each club, I have all of those countries who are ‘In the Club’ each increase their tariffs on those countries who are ‘Out of the Club’, and record the impact this has on each country’s Welfare. Finally, I save the results to .mat files.

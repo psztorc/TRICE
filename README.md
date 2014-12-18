@@ -271,8 +271,8 @@ R Markdown File: \model\results\r_main.Rmd
 	head(Huge)
 	
 	
-	write.csv(mDF,Pst("MatlabOutput",Suffix))
-	write.csv(Huge,Pst("AnnotatedMatlabOutput",Suffix),row.names=FALSE)
+	write.csv(mDF,Pst("r_results/MatlabOutput",Suffix))
+	write.csv(Huge,Pst("r_results/AnnotatedMatlabOutput",Suffix),row.names=FALSE)
 	
 	```
 	
@@ -289,7 +289,7 @@ R Markdown File: \model\results\r_main.Rmd
 	names(MaxesCast) <- c("importer","welfare")
 	MaxesFull <- merge( MaxesCast, mDF[, c("welfare", "cgroup", "rawshock")] )
 	
-	write.csv(MaxesFull, Pst("MaxTarrifsFromOssa",Suffix))
+	write.csv(MaxesFull, Pst("r_results/MaxTarrifsFromOssa",Suffix))
 	
 	```
 	
@@ -353,7 +353,7 @@ R Markdown File: \model\results\r_main.Rmd
 	    labs(title=paste("Clubs of size",i))
 	}
 	
-	pdf(file=Pst("NonClubOnly",SuffixPDF))
+	pdf(file=Pst("r_results/NonClubOnly",SuffixPDF))
 	for( i in 1:6 ) print(Plots[[i]])
 	dev.off()
 	
@@ -433,8 +433,8 @@ R Markdown File: \model\results\r_main.Rmd
 	OutDF$Welfare5pct <-  OutDF$xBeta*0.05 + OutDF$x2Beta*0.05*0.05 + 1
 	
 	# Dump results
-	write.csv( InDF, file=Pst("InTheClub",Suffix) )
-	write.csv( OutDF,file=Pst("InTheClub",Suffix) )
+	write.csv( InDF, file=Pst("r_results/InTheClub",Suffix) )
+	write.csv( OutDF,file=Pst("r_results/OutTheClub",Suffix) )
 	
 	```
 	
@@ -513,18 +513,22 @@ R Markdown File: \model\results\r_main.Rmd
 	# lose some columns
 	GlobalWelfare <- GlobalWelfare[,c(10,2,9,3,5,6)]
 	
-	write.csv( GlobalWelfare, file=Pst("OssaTable",Suffix), row.names = FALSE )
-	
-	
+	write.csv( GlobalWelfare, file=Pst("r_results/OssaTable",Suffix), row.names = FALSE )
 	
 	```
 	
 	
 	```{r TariffAnalysis}
+	
+	
 	AllTariffs <- melt( readMat('alltariffs.mat') )[,-6]
 	names(AllTariffs) <- c("exporter_taxed","importer_taxing","industry","shock","value")
 	
 	ShockDf <- data.frame(shock=1:length(Shocks),rawshock=Shocks)
 	mAllTariffs <- merge(AllTariffs,ShockDf)
 	
-	write.csv(mAllTariffs,"AllTariffs.csv")
+	write.csv(mAllTariffs,Pst("r_results/AllTariffs",Suffix))
+	
+	```
+
+
